@@ -29,7 +29,7 @@ export default function LandingPage() {
             <div className={classes.innerBox1}>
                 <div className={classes.innerBox2} style={innerBox2Style}>
                     <div className={classes.Info}>
-                        <div className={classes.description}><div className={classes.about}>About Me</div></div>
+                        <div className={classes.description}><div className={classes.about}>ABOUT ME.</div></div>
                     </div>
                 </div>
             </div>
