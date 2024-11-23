@@ -6,17 +6,17 @@ import CloseIcon from '@mui/icons-material/Close';
 import Divider from '@mui/material/Divider';
 
 const classes = {
-  NavContainer: 'fixed z-[100] w-full flex justify-center items-center p-4',
-  Navbar: 'xl:w-[50%] sm:w-[90%] w-[95%]  p-4 backdrop-blur-md mb-8 rounded-full flex justify-between items-center',
-  logo: 'w-8 h-8 bg-white rounded-full ',
+  NavContainer: 'fixed z-[100] w-full flex justify-center items-center p-2',
+  Navbar: 'w-full 2xl:max-w-[1200px] p-4 xl:px-16 backdrop-blur-md  rounded-full flex justify-between items-center',
+  logo: 'w-8 h-8 bg-white xl:ml-8  rounded-full ',
   logo2: 'w-8 h-8 bg-black rounded-full',
-  links: 'flex items-center gap-8 hidden text-white sm:flex text-lg font-semibold',
+  links: 'flex items-center gap-3 hidden text-white sm:flex text-4 px-2',
   DrawerContents: 'flex flex-col',
   DrawerHead: 'flex justify-between items-center -mt-2 p-6 px-6',
-  DrawerListLinks: 'flex flex-col px-[16px] gap-4 mt-8',
+  DrawerListLinks: 'flex flex-col items-center mt-32 justify-center px-[16px] gap-4 mt-8',
   DrawerCloseButton:'text-black  mb-4'
 };
-const navItems = [{name:'Home',link:'/'},{name:'About',link:'/about'},{name:'Projects',link:'/projects'},{name:'Contact',link:'/contact'}];
+const navItems = [{name:'Blog',link:'/blog'},{name:'About',link:'/about'},{name:'Projects',link:'/projects'},{name:'Contact',link:'/contact'}];
 function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -33,9 +33,9 @@ function Navbar() {
         </div>
         <div className={classes.links}>
           {navItems.map((item,index) => (
-            <div key={index} className='bg-slate-100  rounded-md' >
-              <div className='bg-zinc-900  rounded-md  transition-transform ease-in-out hover:-translate-x-[2px] hover:-translate-y-[1px]'>
-              <a href={item.link} className="text-white">
+            <div key={index} className='bg-slate-100  rounded-[50%]' >
+              <div className='bg-black border h-[2.1rem] w-[6.5rem] rounded-[50%] flex justify-center items-center transition-transform ease-in-out hover:-translate-x-[2px] hover:-translate-y-[4px]'>
+              <a href={item.link} className="text-white p-2  ">
                 {item.name}
               </a>
               </div>
@@ -71,11 +71,13 @@ function Navbar() {
           <Divider varient="middle" color='black' className='opacity-50'/>
           <div className={classes.DrawerListLinks}>
           {navItems.map((item,index) => (
-            <div key={index}>
-              <a href={item.link} className="text-black">
-                {item.name}
-              </a>
-            </div>
+           <div key={index} className='bg-slate-100  rounded-[50%]' >
+           <div className='bg-zinc-900 border h-[2.1rem] w-[6.5rem] rounded-[50%] flex justify-center items-center transition-transform ease-in-out hover:-translate-x-[2px] hover:-translate-y-[3px]'>
+           <a href={item.link} className="text-white p-2  ">
+             {item.name}
+           </a>
+           </div>
+         </div>
           ))}
         </div>
         </div>
