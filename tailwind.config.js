@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ['P22'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

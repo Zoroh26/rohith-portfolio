@@ -7,10 +7,17 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+
 @font-face {
   font-family: 'P22';
-  
-  src: url('../../public/fonts/P22-Mackinac/P22Mackinac-MediumItalicSC_21.otf') format('opentype');
+  font-weight: 350;
+
+  src: url('../../public/fonts/P22-Mackinac/P22MackinacPro-BookItalic_15.otf') format('opentype');
+}
+
+.regular-text {
+  font-family: 'P22', sans-serif;
+  font-weight: 350;
 }
 
 @media (prefers-color-scheme: dark) {
